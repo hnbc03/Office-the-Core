@@ -1,0 +1,81 @@
+body {
+    background-color: #212121; /* Nội dung chính */
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Ẩn scrollbar nhưng vẫn scroll được */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Tab Style */
+.tab-btn { color: #666; }
+.tab-btn.active {
+    background-color: #212121;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Sidebar Titles */
+.sidebar-item {
+    color: #888;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+}
+.sidebar-item:hover, .sidebar-item.active {
+    color: #fff;
+}
+
+/* Grid so sánh 3 nền tảng */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 2rem;
+}
+.platform-card {
+    background: #171717;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+.platform-card h4 {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+}
+
+/* Markdown styling */
+#mainContent h1 { font-size: 2rem; font-weight: 600; margin-bottom: 2rem; }
+#mainContent strong { color: #3b82f6; }
+
+/* Định dạng nội dung bên trong các cột so sánh */
+.platform-card div {
+    color: #b3b3b3;
+    font-size: 0.85rem;
+}
+
+.platform-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.platform-card li::before {
+    content: "→";
+    color: #3b82f6;
+    margin-right: 8px;
+    font-size: 10px;
+}
+
+/* Hiệu ứng xuất hiện mượt mà */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
